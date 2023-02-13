@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-3/4 mx-auto bg-blue-400 mt-16 p-10">
+        <h1 class="text-3xl text-center font-semibold pt-5" id="heading-text">My Text Editor</h1>
+        <div class="w-3/4 mx-auto bg-blue-200 mt-5 p-10 rounded-lg border-solid border border-black">
+            <div>
+                <button class="p-3 bg-red-400 rounded-lg" id="bold-btn">Bold</button>
+                <button class="p-3 bg-red-400 rounded-lg ml-3" id="italic-btn">Italic</button>
+                <button class="p-3 bg-red-400 rounded-lg ml-3" id="underline-btn">UnderLine</button>
+                <input type="number" name="" value="16" class="p-3 rounded-lg ml-3" id="font-size">
+                <input type="color" name="" id="color-input" class="w-20 ml-3">
+            </div>
+            <hr class="bg-black h-px my-8 border-0">
+            <textarea name="" id="text-area" class="p-4 w-full h-40 rounded-lg"></textarea>
+        </div>
+    </div>
+
+    <script src="js/editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM</title>
+        <link rel="stylesheet" href="styles/style.css">
+        <style>
+        li{
+            color: tomato;
+        }
+        #fruits-title{
+            color: black;
+        }
+    </style>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to DOM</h1>
+        </header>
+        <main id="main-container">
+            <section>
+                <h1>DOM de baba</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, sed. Voluptas obcaecati natus iure distinctio perspiciatis totam illum maxime qui quo, asperiores voluptates laboriosam quod cupiditate earum inventore at harum.</p>
+                <ul>
+                    <li>Jalali Set</li>
+                    <li>Shafayet</li>
+                    <li>Bonobasher shadon</li>
+                </ul>   
+            </section>
+
+            <section class="fruits-container">
+                <h1 id="fruits-title">Fruits I like</h1>
+                <ul>
+                    <li>Apple</li>
+                    <li>Banana</li>
+                    <li>Carrot</li>
+                </ul>
+            </section>
+            <section id="places-container">
+                <h1 id="place-title">Places I Like</h1>
+                <ul id="places-list">
+                    <li>Sundarban</li>
+                    <li>Bandorban</li>
+                    <li>Kataban</li>
+                </ul>
+            </section>
+        </main> 
+        <script src="js/dom.js"></script>
+        <script src="js/append.js"></script>
+        <script src="js/styleInJs.js"></script>
+        <script>
+            const liCollection = document.getElementsByTagName('li');
+            
+            for(const li of liCollection)
+            {
+                // console.log(li.innerText)
+            }
+
+            const headingCollection = document.getElementsByTagName('h1');
+
+            for(const h1 of headingCollection)
+            {
+                // console.log(h1.innerText);
+            }
+
+            // querySelectorAll
+            const someLi = document.querySelectorAll('.fruits-container li');
+            for(const li of someLi)
+            {
+                // console.log(li.innerText);
+            }
+            /*
+            An HTMLCollection is a collection of document elements.
+
+            A NodeList is a collection of document nodes (element nodes, attribute nodes, and text nodes).
+
+            HTMLCollection items can be accessed by their name, id, or index number.
+
+            NodeList items can only be accessed by their index number.
+            */
+
+            document.getElementById('fruits-title').style.backgroundColor = 'yellow'
+            document.getElementById('fruits-title').style.textAlign = 'center'
+        </script>
+    </body>
+</html>
