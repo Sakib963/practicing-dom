@@ -69,3 +69,48 @@ NodeList items can only be accessed by their index number.
 * When a web page is loaded in browser, HTML document converts as DOM tree.
 * Why we need DOM?
     * We can use DOM to manipulate html and css elements, also we can react to events.
+
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;<br>
+# Common DOM Related Questions and Answers
+
+## What is DOM?
+DOM is an programming interface for HTML document. When a web page loads on browser, that html document get converted into a DOM tree. DOM defines the events for all html documents, method to access all html elements, the properties of all html documents and all html elements as an object.
+
+## What are the different ways to get an element from DOM?
+From the DOM, users can access HTML elements in five different ways in JavaScript.
+
+* Get HTML element by Id
+* Get HTML element by className
+* Get HTML element by Name
+* Get HTML element by tagName
+* Get HTML element by CSS Selector
+
+## What's the difference between an Event Handler and an Event Listner?
+These are two ways of handling events.  
+
+When a code runs after an event takes place, this is known as registering an event handler. On the other hand, the event listener listens to the event and then triggers the code for handling the event.
+
+## What does event bubbling mean in JavaScript?
+Event Bubbling is a concept in the DOM (Document Object Model). It happens when an element receives an event, and that event bubbles up (or you can say is transmitted or propagated) to its parent and ancestor elements in the DOM tree until it gets to the root element.
+![bubble](https://user-images.githubusercontent.com/66853064/218594323-4c3f8de8-a9d8-4114-9eef-5be9c5c24826.PNG)
+Event bubbling is a method of event propagation in the HTML DOM API when an event is in an element inside another element, and both elements have registered a handle to that event. It is a process that starts with the element that triggered the event and then bubbles up to the containing elements in the hierarchy. In event bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements.
+## Can you explain the different types of events available in JavaScript?
+* onchange	An HTML element has been changed
+* onclick	The user clicks an HTML element
+* onmouseover	The user moves the mouse over an HTML element
+* onmouseout	The user moves the mouse away from an HTML element
+* onkeydown	The user pushes a keyboard key
+* onload	The browser has finished loading the page
+
+## What's the difference between event.preventDefault() and event.stopPropagation()?
+stopPropagation prevents further propagation of the current event in the capturing and bubbling phases.
+
+preventDefault prevents the default action the browser makes on that event.
+
+event.preventDefault()
+Prevents the browsers default behaviour (such as opening a link), but does not stop the event from bubbling up the DOM.
+
+event.stopPropagation()
+Prevents the event from bubbling up the DOM, but does not stop the browsers default behaviour.
